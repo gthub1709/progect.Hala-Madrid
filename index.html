@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Реал Мадрид vs Барселона</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.8rem;
+    }
+    .slide img {
+      max-width: 300px;
+      margin: 20px 0;
+    }
+    .active {
+      opacity: 1;
+      z-index: 1;
+    }
+    h1, h2, p {
+      margin: 10px 0;
+    }
+    .hala {
+      font-size: 2.5rem;
+      color: #fff200;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Слайды -->
+
+  <div class="slide active">
+    <h1>ФК Реал Мадрид</h1>
+    <p>Короли футбола. Самый титулованный клуб в истории.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Герб Реал Мадрида" />
+  </div>
+
+  <div class="slide">
+    <h2>Барселона</h2>
+    <p>Клуб с историей, но с подсчётом трофеев всё проще 😅</p>
+    <p>Максимум 2–3 за последние сезоны</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="Герб Барселоны" />
+  </div>
+
+  <div class="slide">
+    <h2>Сравнение</h2>
+    <p>Реал Мадрид: титулы не помещаются в музей</p>
+    <p>Барселона: ищут, где взять ещё парочку кубков</p>
+  </div>
+
+  <div class="slide">
+    <h2>Финал: Кто где?</h2>
+    <p>🧒 В Реал Мадриде — 30 мальчиков</p>
+    <p>👧 В Барселоне — 30 девочек</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/3163/3163270.png" alt="Мальчики и девочки" />
+  </div>
+
+  <div class="slide">
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Герб Реала" />
+    <div class="hala">HALA MADRID!</div>
+    <p>Кто болеет за Барсу — они девочки 💅</p>
+  </div>
+
+  <!-- JS для автослайдов -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 5000); // каждые 5 секунд
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
